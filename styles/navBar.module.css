@@ -1,0 +1,44 @@
+.container {
+  position: absolute;
+  width: 231px;
+  height: fit-content;
+  top: 50px;
+  left: 75px;
+}
+
+.h1 {
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 18px;
+  width: fit-content;
+}
+
+.h1:hover,
+.li:hover,
+.p:hover {
+  color: rgb(194, 127, 127);
+}
+.p {
+  line-height: 14px;
+  font-size: 14px;
+  width: fit-content;
+}
+.ul {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  width: fit-content;
+}
+.li {
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.bioText {
+  font-weight: 300;
+  font-size: 14px;
+  width: fit-content;
+  text-align: justify;
+}

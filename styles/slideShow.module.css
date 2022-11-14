@@ -1,0 +1,51 @@
+.currentSlide {
+  width: 100%;
+  height: fit-content;
+  box-shadow: 0px 0px 10px #000000bd;
+}
+.btnContainer {
+  display: flex;
+  height: 20px;
+  width: 100%;
+  background-color: rgba(240, 255, 255, 0);
+  margin-bottom: 5px;
+}
+.left {
+  display: flex;
+  justify-content: left;
+  width: 50%;
+  line-height: 14px;
+  font-size: 14px;
+}
+.right {
+  display: flex;
+  justify-content: right;
+  width: 50%;
+  line-height: 14px;
+  font-size: 14px;
+}
+.arrows {
+  display: flex;
+  width: fit-content;
+  padding-right: 3px;
+}
+.leftArrow {
+  display: block;
+  transform: translateY(3px);
+  cursor: pointer;
+}
+.rightArrow {
+  display: block;
+  transform: translateY(3px);
+  cursor: pointer;
+}
+
+.pageNum {
+  height: 15px;
+  width: fit-content;
+  transform: translateY(3px);
+}
+.leftArrow:hover,
+.rightArrow:hover {
+  color: rgb(194, 127, 127);
+}
