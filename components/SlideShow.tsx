@@ -7,10 +7,10 @@ import 'react-slideshow-image/dist/styles.css';
 const Slideshow = () => {
   //Array of Images
   const images = [
-    'images/Image1.jpg',
-    'images/Image2.jpg',
-    'images/Image1.jpg',
-    'images/Image2.jpg',
+    'images/Now/img1.jpg',
+    'images/Now/img2.jpg',
+    'images/Now/img3.jpg',
+    'images/Now/img4.jpg',
   ];
 
   const indicators = (index) => (
