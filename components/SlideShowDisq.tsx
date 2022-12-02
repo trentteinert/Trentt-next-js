@@ -1,70 +1,128 @@
 import React from 'react';
-//These are Third party packages for smooth slideshow
-import { Fade } from 'react-slideshow-image';
+import Image from 'next/image';
+import { useState } from 'react';
 
-import 'react-slideshow-image/dist/styles.css';
+// gallery
+const images = [
+  '/images/disq/img1.jpg',
+  '/images/disq/img2.jpg',
+  '/images/disq/img3.jpg',
+];
+//slideshow
 
-const SlideshowDisq = () => {
-  //Array of Images
-  const images = [
-    'images/Image1.jpg',
-    'images/Image2.jpg',
-    'images/Image1.jpg',
-    'images/Image2.jpg',
-  ];
+const SlideShow = () => {
+  const [imageNum, imageCounter] = useState(1);
 
-  const indicators = (index) => (
-    <div className='indicator'>
-      {index + 1} / {images.length}
-    </div>
-  );
+  const plusSlide = () => {
+    if (imageNum > images.length - 1) {
+      imageCounter(1);
+    } else {
+      imageCounter(imageNum + 1);
+    }
 
-  const buttonStyle = {
-    position: 'absolute',
-    left: '38px',
-    top: '-12px',
-    width: 'fit-content',
-    height: '14px',
-    lineHeight: '14px',
-    fontSize: '14px',
-    border: '0px',
-  };
-  const buttonStyle1 = {
-    position: 'absolute',
-    top: '-12px',
-    width: 'fit-content',
-    height: '14px',
-    lineHeight: '14px',
-    fontSize: '14px',
-    border: '0px',
+    console.log(imageNum);
   };
 
-  //These are custom properties for zoom effect while slide-show
-  const Properties = {
-    indicators: indicators,
-    transitionDuration: 250,
-    autoplay: false,
-    canSwipe: false,
-    infinite: true,
-
-    prevArrow: <button style={{ ...buttonStyle1 }}>prev</button>,
-
-    nextArrow: <button style={{ ...buttonStyle }}>next</button>,
+  const minusSlide = () => {
+    if (imageNum < 2) {
+      imageCounter(images.length);
+    } else {
+      imageCounter(imageNum - 1);
+    }
   };
+
+  const [slideShow, changeDisplay] = useState(false);
+
+  const handleDisplay = () => {
+    changeDisplay((slideShow) => !slideShow);
+  };
+
   return (
-    <div className='max-w-[45%] ml-[360px] mt-20 mr-10 '>
-      <Fade {...Properties}>
+    <div
+      id='slideshow-container'
+      className='ml-[360px] mt-[60px] mr-[60px] w-fit h-fit  relative'
+    >
+      <div className='flex pb-1'>
+        <ul className='w-[50%] flex'>
+          <li
+            onClick={minusSlide}
+            className='cursor-pointer text-[14px] leading-[14px] pr-[2px] mr-[0px]'
+          >
+            prev
+          </li>
+          <div className='cursor-default text-[14px] leading-[14px] pr-[2px] mr-[0px]'>
+            |
+          </div>
+          <li
+            onClick={plusSlide}
+            className='cursor-pointer text-[14px] leading-[14px] pr-1 mr-[1px]'
+          >
+            next
+          </li>
+          <li
+            onClick={handleDisplay}
+            className={
+              slideShow
+                ? 'hidden'
+                : 'h-[14px] cursor-pointer text-[13px] leading-[14px] pr-1 ml-[10px]'
+            }
+          >
+            + gallery
+          </li>
+          <li
+            onClick={handleDisplay}
+            className={
+              slideShow
+                ? 'h-[14px] cursor-pointer text-[13px] leading-[14px] pr-1 ml-[10px]'
+                : 'hidden'
+            }
+          >
+            - gallery
+          </li>
+        </ul>
+        <div className='flex w-[50%] justify-end'>
+          <div className='cursor-default text-[14px] leading-[14px]'>
+            {imageNum}/{images.length}
+          </div>
+        </div>
+      </div>
+      <div id='current-slide' className={slideShow ? 'hidden' : ''}>
+        <Image
+          onClick={plusSlide}
+          className='w-fit max-h-[80vh] cursor-pointer'
+          src={`/../public` + images[imageNum - 1]}
+          alt='/'
+          width={1400}
+          height={933}
+          priority={true}
+        />
+      </div>
+      <div
+        id='gallery'
+        className={
+          slideShow ? 'grid grid-cols-3 gap-3 max-w-[900px] pb-14' : 'hidden'
+        }
+      >
         {images.map((each, index) => (
-          <div key={index}>
-            <img className='w-[100%] cursor-grab mt-2' src={each} />
+          <div
+            className='cursor-pointer'
+            onClick={() => {
+              imageCounter(index + 1);
+              changeDisplay((slideShow) => !slideShow);
+            }}
+          >
+            <Image
+              src={each}
+              alt='/'
+              width={400}
+              height={400}
+              priority={false}
+            />
           </div>
         ))}
-      </Fade>
-      <div className='absolute top-[67px] left-[391px] w-fit h-fit leading-4 text-sm z-10'>
-        |
       </div>
     </div>
   );
 };
 
-export default SlideshowDisq;
+export default SlideShow;

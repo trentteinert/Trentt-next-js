@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from '../../styles/navBar.module.css';
 import BioText from './bioText';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import RouteMenu from '../routeMenu';
 
 const navBar = () => {
@@ -30,35 +30,35 @@ const navBar = () => {
       <Link className={styles.link} href='/'>
         <h1 className={styles.p}>contact@trentteinert.com</h1>
       </Link>
-      <ul className={styles.ul}>
-        <li className={styles.li}>
+      <ul className=' flex w-fit'>
+        <li className=' w-fit'>
           <button
-            className={bioText ? 'hidden' : 'w-[34px] text-right'}
+            className={bioText ? 'hidden' : 'text-[14px] w-[fit] pr-2 '}
             onClick={handleBio}
           >
             &#43; bio
           </button>
           <button
-            className={bioText ? 'w-[34px] text-right' : 'hidden'}
+            className={bioText ? 'text-[14px] w-[fit] pr-2' : 'hidden'}
             onClick={handleBio}
           >
             &#45; bio
           </button>
         </li>
-        <li className={styles.li}>
-          <div className='w-[27px]'>
+        <li className=' w-fit'>
+          <button className='text-[14px] w-[fit] pr-2'>
             <Link href='/cv'>+ cv</Link>
-          </div>
+          </button>
         </li>
-        <li className={styles.li}>
+        <li className=' w-fit'>
           <button
-            className={menu ? 'hidden' : 'w-[49px] text-right'}
+            className={menu ? 'hidden' : 'text-[14px] w-[fit] pr-2'}
             onClick={handleMenu}
           >
             &#43; menu
           </button>
           <button
-            className={menu ? 'w-[49px] text-right' : 'hidden'}
+            className={menu ? 'text-[14px] w-[fit] pr-2' : 'hidden'}
             onClick={handleMenu}
           >
             &#45; menu

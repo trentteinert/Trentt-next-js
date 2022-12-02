@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import BioText from '../components/navcomponents/bioText';
+
 import SlideshowDisq from '../components/SlideShowDisq';
+
+import ScrollImage from '../components/mobileImages/ScrollImageDisq';
 
 export default function Disquiet() {
   return (
@@ -9,7 +10,12 @@ export default function Disquiet() {
       <Head>
         <title>Harlingen Agri</title>
       </Head>
-      <SlideshowDisq />
+      <div className='slide-show'>
+        <SlideshowDisq />
+      </div>
+      <div className='slide-show-mobile'>
+        <ScrollImage />
+      </div>
     </>
   );
 }

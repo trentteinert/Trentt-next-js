@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+
 import SlideShowHrl from '../components/SlideShowHrl';
-import BioText from '../components/navcomponents/bioText';
+import ScrollImage from '../components/mobileImages/ScrollImageHrl';
 
 export default function Hrl() {
   return (
@@ -9,7 +9,12 @@ export default function Hrl() {
       <Head>
         <title>Harlingen</title>
       </Head>
-      <SlideShowHrl />
+      <div className='slide-show'>
+        <SlideShowHrl />
+      </div>
+      <div className='slide-show-mobile'>
+        <ScrollImage />
+      </div>
     </>
   );
 }

@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import SlideShowHrlAgri from '../components/SlideShowHrlAgri';
-import BioText from '../components/navcomponents/bioText';
+import ScrollImage from '../components/mobileImages/ScrollImageHrlAgri';
 
 export default function HrlAgri() {
   return (
@@ -9,7 +8,12 @@ export default function HrlAgri() {
       <Head>
         <title>Harlingen Agri</title>
       </Head>
-      <SlideShowHrlAgri />
+      <div className='slide-show'>
+        <SlideShowHrlAgri />
+      </div>
+      <div className='slide-show-mobile'>
+        <ScrollImage />
+      </div>
     </>
   );
 }
