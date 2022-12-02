@@ -25,13 +25,13 @@ const cv = () => {
 
         <div className='cv-text'>
           <h1>EXHIBITIONS</h1>
-          <p>- 2022 'Photoville annual festival' Brooklyn, NY</p>
+          <p>- 2022 &apos;Photoville annual festival&apos; Brooklyn, NY</p>
           <p>
             - 2021 ‘UH School of Art Annual Student Exhibition’ Blaffer Art
             Museum, Houston, TX - 2021 ‘Emergence’ Part II, UH Senior Block
-            Exhibition, Houston, TX - 2020 ‘Untitled’ For 1100 Louisiana's'
-            Video Wall, (pending) Houston, Texas (in collaboration with Reggie
-            Tucker, Lisa Bridges, and Dre Negrete)
+            Exhibition, Houston, TX - 2020 ‘Untitled’ For 1100
+            Louisiana&apos;s&apos; Video Wall, (pending) Houston, Texas (in
+            collaboration with Reggie Tucker, Lisa Bridges, and Dre Negrete)
           </p>
           <p>
             - 2020 ‘Assuming the Pose: Contemporary Takes on Portraiture’, Third
