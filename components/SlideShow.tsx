@@ -116,6 +116,7 @@ const SlideShow = () => {
       >
         {images.map((each, index) => (
           <div
+            key={index}
             className='cursor-pointer'
             onClick={() => {
               imageCounter(index + 1);

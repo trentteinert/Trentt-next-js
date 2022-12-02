@@ -32,7 +32,7 @@ const ScrollImage = () => {
       <div className='w-[95%] m-auto'>
         <div id='gallery' className={'grid grid-cols-1 gap-7 pt-5 pb-14'}>
           {images.map((each, index) => (
-            <div className='cursor-pointer' onClick={() => {}}>
+            <div key={index} className='cursor-pointer' onClick={() => {}}>
               <Image
                 src={each}
                 alt='/'

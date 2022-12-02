@@ -5,7 +5,7 @@ import BioText from './bioText';
 import { useState } from 'react';
 import RouteMenu from '../routeMenu';
 
-const navBar = () => {
+const NavBar = () => {
   const [bioText, changeBioText] = useState(false);
   const [menu, changeMenu] = useState(true);
 
@@ -75,4 +75,4 @@ const navBar = () => {
   );
 };
 
-export default navBar;
+export default NavBar;

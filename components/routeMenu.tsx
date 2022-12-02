@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from '../styles/routerMenu.module.css';
 import { useRouter } from 'next/router';
 
-const routeMenu = () => {
+const RouteMenu = () => {
   const router = useRouter();
 
   return (
@@ -44,4 +44,4 @@ const routeMenu = () => {
   );
 };
 
-export default routeMenu;
+export default RouteMenu;
