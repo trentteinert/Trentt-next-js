@@ -105,7 +105,6 @@ const SlideShow = () => {
           alt='/'
           width={1400}
           height={933}
-          priority={true}
         />
       </div>
       <div
