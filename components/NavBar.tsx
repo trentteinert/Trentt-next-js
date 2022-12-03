@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '../../styles/navBar.module.css';
-import BioText from './bioText';
+import styles from '../styles/navBar.module.css';
+import BioText from './navcomponents/bioText';
 import { useState } from 'react';
-import RouteMenu from './RouteMenu';
+import RouteMenu from './navcomponents/RouteMenu';
 
 const NavBar = () => {
   const [bioText, changeBioText] = useState(false);
