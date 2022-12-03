@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '../../styles/navBar.module.css';
 import BioText from './bioText';
 import { useState } from 'react';
-import RouteMenu from '../RouteMenu';
+import RouteMenu from './RouteMenu';
 
 const NavBar = () => {
   const [bioText, changeBioText] = useState(false);
