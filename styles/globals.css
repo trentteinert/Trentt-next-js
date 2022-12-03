@@ -15,15 +15,6 @@ body {
   font-weight: 400;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: #ececec;
-    background: #222;
-  }
-}
 .nav-bar {
   display: block;
 }
@@ -56,6 +47,7 @@ body {
   height: 20px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .cv-born a {
   font-size: 14px;
@@ -65,8 +57,10 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  background-color: rgb(49, 49, 49);
+  color: #ececec;
+  background-color: #222;
 }
+
 @media only screen and (max-width: 600px) {
   .slide-show {
     display: none;
@@ -102,11 +96,25 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    background-color: rgb(49, 49, 49);
+    color: #ececec;
+    background-color: #222;
   }
   .cv {
     margin: auto;
     margin-top: 20px;
     width: 90%;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #ececec;
+    background: #222;
+  }
+  .cv-born a {
+    color: #222;
+    background: #ececec;
   }
 }

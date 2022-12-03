@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '../../styles/navBar.module.css';
 import BioText from './bioText';
 import { useState } from 'react';
-import RouteMenu from '../routeMenu';
+import RouteMenu from '../RouteMenu';
 
 const NavBar = () => {
   const [bioText, changeBioText] = useState(false);
@@ -27,7 +27,7 @@ const NavBar = () => {
       <Link className={styles.link} href='/'>
         <h1 className={styles.h1}>Trent Teinert</h1>
       </Link>
-      <Link className={styles.link} href='/'>
+      <Link className={styles.link} href='mailto:trentteinert@gmail.com'>
         <h1 className={styles.p}>contact@trentteinert.com</h1>
       </Link>
       <ul className=' flex w-fit'>

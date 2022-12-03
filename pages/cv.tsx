@@ -6,7 +6,7 @@ const cv = () => {
       <div className='cv'>
         <div className='cv-born'>
           <p>Born 1998 / Harlingen, Tx.</p>
-          <a href='/components/CV_JULY_24.pdf' download>
+          <a href='public/CV_JULY_24.pdf' download>
             Download PDF
           </a>
         </div>

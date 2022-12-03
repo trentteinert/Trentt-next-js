@@ -6,7 +6,7 @@ const ScrollButton = () => {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   };
   return (
-    <div className='w-[90%] m-auto text-center mb-6 '>
+    <div className='w-[90%] m-auto text-center mb-[60px] '>
       <button onClick={topFunction}>scroll to top</button>
     </div>
   );
