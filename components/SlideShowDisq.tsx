@@ -90,7 +90,7 @@ const SlideShow = () => {
         <Image
           onClick={plusSlide}
           className='w-fit max-h-[80vh] cursor-pointer'
-          src={`/../public` + images[imageNum - 1]}
+          src={images[imageNum - 1]}
           alt='/'
           width={1400}
           height={933}
