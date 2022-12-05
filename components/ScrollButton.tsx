@@ -1,5 +1,6 @@
 import React from 'react';
 
+//scroll to top button
 const ScrollButton = () => {
   const topFunction = () => {
     document.body.scrollTop = 0; // For Safari

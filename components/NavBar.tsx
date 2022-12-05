@@ -5,10 +5,13 @@ import BioText from './navcomponents/bioText';
 import { useState } from 'react';
 import RouteMenu from './navcomponents/RouteMenu';
 
+//whole navbar component
 const NavBar = () => {
+  //usestates for menus and biotext component
   const [bioText, changeBioText] = useState(false);
   const [menu, changeMenu] = useState(true);
 
+  //handlers for these useStates
   const handleBio = () => {
     changeBioText(!bioText);
     if (menu == true) {

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from '../../styles/routerMenu.module.css';
 import { useRouter } from 'next/router';
 
+// router using useRouter and Link from next
 const RouteMenu = () => {
   const router = useRouter();
 

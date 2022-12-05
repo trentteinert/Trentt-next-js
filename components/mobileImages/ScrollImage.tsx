@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
+//images
 const images = [
   '/images/Now/img1.jpg',
   '/images/Now/img2.jpg',
@@ -17,7 +18,7 @@ const images = [
   '/images/Now/img13.jpg',
   '/images/Now/img14.jpg',
 ];
-
+// mobile view - uses images.map((each,index)) to create div for each index i give
 const ScrollImage = () => {
   return (
     <div>

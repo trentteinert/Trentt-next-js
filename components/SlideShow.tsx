@@ -19,11 +19,12 @@ const images = [
   '/images/Now/img13.jpg',
   '/images/Now/img14.jpg',
 ];
-//slideshow
 
+//slideshow useState - counter starting at 1
 const SlideShow = () => {
   const [imageNum, imageCounter] = useState(1);
 
+  // page next - if above images.length reset to 1
   const plusSlide = () => {
     if (imageNum > 13) {
       imageCounter(1);
@@ -34,6 +35,7 @@ const SlideShow = () => {
     console.log(imageNum);
   };
 
+  // page prev - if below 2 set to images.length
   const minusSlide = () => {
     if (imageNum < 2) {
       imageCounter(images.length);
@@ -42,8 +44,10 @@ const SlideShow = () => {
     }
   };
 
+  // useState for swapping between slideshow and gallery
   const [slideShow, changeDisplay] = useState(false);
 
+  // handler to change the useState
   const handleDisplay = () => {
     changeDisplay((slideShow) => !slideShow);
   };
@@ -53,7 +57,7 @@ const SlideShow = () => {
       id='slideshow-container'
       className='ml-[360px] mt-[60px] mr-[60px] w-fit h-fit  relative'
     >
-      <div className='flex pb-1'>
+      <div className='flex pb-1 '>
         <ul className='w-[50%] flex'>
           <li
             onClick={minusSlide}
@@ -75,7 +79,7 @@ const SlideShow = () => {
             className={
               slideShow
                 ? 'hidden'
-                : 'h-[14px] cursor-pointer text-[13px] leading-[14px] pr-1 ml-[10px]'
+                : 'h-[14px] w-fit cursor-pointer text-[13px] leading-[14px] pr-1 ml-[10px]'
             }
           >
             + gallery
